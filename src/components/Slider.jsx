@@ -4,13 +4,16 @@ import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { sliderItems } from '../data';
 import { useState } from "react";
+import { mobile } from "../responsive";
+
 
 const Container = styled.div`
     width: 100%;
     height: 100vh;
     display: flex;
     position: relative;
-    overflow: hidden
+    overflow: hidden;
+    ${mobile({ display: "none" })};
 `
 
 const Arrow = styled.div`
