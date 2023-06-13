@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import { Badge } from '@material-ui/core';
 import { Search, ShoppingCartOutlined } from '@material-ui/icons';
 import { mobile } from "../responsive";
+import { Link } from 'react-router-dom';
+
 
 const Container = styled.div`
   height: 60px;
@@ -80,12 +82,18 @@ const Navbar = () => {
         </Left>
         <Center><Logo>Hemizzz.</Logo></Center>
         <Right>
-          <MenuItem>Register</MenuItem>
-          <MenuItem>Sign In</MenuItem>
+          <Link to='/register'>
+            <MenuItem>Register</MenuItem>
+          </Link>
+          <Link to = 'login'>
+            <MenuItem>Sign In</MenuItem>
+          </Link>
           <MenuItem>
+          <Link to='cart'>
             <Badge badgeContent={4} color="primary">
               <ShoppingCartOutlined />
             </Badge>
+          </Link>
           </MenuItem>
         </Right>
       </Wrapper>
